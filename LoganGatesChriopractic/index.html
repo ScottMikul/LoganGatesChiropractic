@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- my css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- fontawesome cdn https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- moment js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+
+    <!-- bootstrapjs / jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <!-- my javascript -->
+    <script defer src="assets/scripts/script.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-right">
+                Application form date: <span id="date"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="card text-center">
+                    <div class="card-header underlined">
+                        Patient Information
+                    </div>
+                    <div class="card-body bg-gray text-left">
+                        <div class="form-row mb-2">
+                            <div class="col-4">
+                                <label for="firstName">First Name</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="first">
+                            </div>
+                            <div class="col-4">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="last">
+                            </div>
+                            <div class="col-4">
+                                <label for="MI">Middle Initial</label>
+                                <input type="text" class="form-control" id="Middle" placeholder="MI">
+                            </div>
+                        </div>
+                        <div class="form-row mb-2">
+                            <div class="col-8">
+                                <label for="address">Address</label>
+                                <input type="text" class="form-control" id="address" placeholder="1234 address">
+                            </div>
+                            <div class="col-4">
+                                <label for="zip">Zip Code</label>
+                                <input type="text" class="form-control" id="zip" placeholder="30068">
+                            </div>
+                        </div>
+                        <div class="form-row mb-2">
+                            <div class="col-12">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="example@email.com">
+                            </div>
+                        </div>
+                        <div class="form-row mb-2">
+                            <div class="col-12">
+                                <label for="Phone">Phone</label>
+                                <input type="text" class="form-control" id="phone" placeholder="555-555-5555">
+                            </div>
+                        </div>
+                        <div class="form-row mb-2">
+                            <div class="col-4">
+                                <label for="dob">Date of Birth</label>
+                                <input type="text" class="form-control" id="dob" placeholder="05/05/1990">
+                            </div>
+                            <div class="col-4">
+
+                            </div>
+                            <div class="col-4">
+                                <div class="form-check mt-4">
+                                    <input class="form-check-input" type="radio" name="gender" id="male"
+                                        value="male" >
+                                    <label class="form-check-label" for="male">
+                                        Male
+                                    </label>
+                                </div>
+                                <div class="form-check mt-4 ">
+                                    <input class="form-check-input" type="radio" name="gender" id="female"
+                                        value="female">
+                                    <label class="form-check-label" for="female">
+                                        Female
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-row mb-2">
+                            <div class="col-2">
+                               Appointment Type (existing patients only):
+                            </div>
+                            <div class="col-2">
+                                <div class="form-check mt-4">
+                                    <input class="form-check-input" type="radio" name="apptype" id="newexam"
+                                        value="newexam" >
+                                    <label class="form-check-label" for="newexam">
+                                        New Exam
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="form-check mt-4">
+                                    <input class="form-check-input" type="radio" name="apptype" id="re-physical"
+                                        value="rephysical" >
+                                    <label class="form-check-label" for="re-physical">
+                                        Re-physical
+                                    </label>
+                                </div>
+
+                            </div>
+                            <div class="col-2">
+                                <div class="form-check mt-4">
+                                    <input class="form-check-input" type="radio" name="apptype" id="adj"
+                                        value="adj">
+                                    <label class="form-check-label" for="adj">
+                                        AdJ
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="form-check mt-4">
+                                    <input class="form-check-input" type="radio" name="apptype" id="rea"
+                                        value="rea">
+                                    <label class="form-check-label" for="rea">
+                                        REA
+                                    </label>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="form-row mb-2">
+                            <div class="col-12">
+                                <label for="emergency">Emergency Contact</label>
+                                <input type="text" class="form-control" id="emergency" placeholder="contact name">
+                            </div>
+                        </div>
+                        <div class="form-row mb-2">
+                            <div class="col-6">
+                                <label for="phone">Phone</label>
+                                <input type="text" class="form-control" id="phone" placeholder="555-555-5555">
+                            </div>
+                            <div class="col-6">
+                                <label for="relationship">Relationship</label>
+                                <input type="text" class="form-control" id="relationship" placeholder="Relationship">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
